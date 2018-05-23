@@ -6,10 +6,13 @@
   <script>
     // service workerが有効なら、service-worker.js を登録します
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./service-worker.js').then(function() { console.log('Service Worker Registered'); });
+      navigator.serviceWorker.register('./service-worker.js')
+            .then(function() { console.log('Service Worker Registered'); });
    }
   </script>
+
   <title>Hello PWA.</title>
+
   <style>
     body {
       text-align:center;
@@ -22,10 +25,13 @@
       display: block;
     }
   </style>
+
 </head>
 <body>
+
   <h1>Hello PWA.</h1>
-  <img src="./pwa-logo.svg" alt="PWA logo" class="image" />
-  <a href="p.html">p.html</a>
+
+  <?php print date('Y/m/d H:i:s'); ?>
+
 </body>
 </html>
